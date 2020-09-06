@@ -6,6 +6,8 @@ import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import { Link } from 'react-router-dom';
+import ChatBubbleOutlineIcon from '@material-ui/icons/ChatBubbleOutline';
+import IconButton from '@material-ui/core/IconButton';
 const useStyles = makeStyles({
     root: {
         minWidth: 275,
@@ -26,9 +28,7 @@ const useStyles = makeStyles({
     },
 });
 
-const btnStyle = {
-    textDecoration: 'none'
-}
+
 
 
 const Post = (props) => {
@@ -45,10 +45,13 @@ const Post = (props) => {
                 </Typography>
             </CardContent>
             <CardActions >
-                <Link to={`/post/${id}`}>
-                    <Button size="small" variant="contained" color="secondary" style={btnStyle}>Show Details</Button>
+                <Link to={`/post/${id}`} style={{textDecoration:"none"}}>
+                    <Button size="small" variant="contained" color="secondary" >Show Details</Button>
                 </Link>
             </CardActions>
+            <IconButton aria-label="share">
+          <ChatBubbleOutlineIcon/>
+        </IconButton>
         </Card>
     );
 };

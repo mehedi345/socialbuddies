@@ -11,6 +11,7 @@ const Home = () => {
     }, [])
     return (
         <div>
+            <h1 style={{color:'blue', fontSize:'20px', marginLeft:'10px'}}>All POSTS</h1>
             {
                 posts.map(post => <Post post={post}></Post>)
             }

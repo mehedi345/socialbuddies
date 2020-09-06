@@ -28,7 +28,9 @@ const Header = () => {
                     <Typography variant="h6" className={classes.title}>
                         Posts
                     </Typography>
-                    <Button color="inherit">Login</Button>
+                   
+                        <Button color="inherit">Login</Button>
+                   
                 </Toolbar>
             </AppBar>
         </div>

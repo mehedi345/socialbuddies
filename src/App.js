@@ -12,6 +12,7 @@ import NoMatch from './components/NoMatch/NoMatch';
 import PostDetail from './components/PostDetail/PostDetail';
 
 
+
 function App() {
   return (
     <div>
@@ -27,6 +28,7 @@ function App() {
           <Route path="/post/:id">
             <PostDetail/>
           </Route>
+          
           <Route path="*">
             <NoMatch/>
           </Route>
