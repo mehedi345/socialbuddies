@@ -32,13 +32,14 @@ const Comment = (props) => {
 
 
     const [picture,setPicture] =useState([])
-    const image =`https://jsonplaceholder.typicode.com/photos/${id}`
-    useEffect(() => {
-        fetch(image)
-            .then(res => res.json())
-        .then(data =>setPicture(data))
-    })
-    const {thumbnailUrl} = picture;
+    //const image = `https://randomuser.me/api/?inc=picture`
+    //const image =`https://jsonplaceholder.typicode.com/photos/${id}`
+    // useEffect(() => {
+    //     fetch(image)
+    //         .then(res => res.json())
+    //     .then(data =>setPicture(data))
+    // })
+    // const {medium} = picture;
     return (
         <Card className={classes.root} variant="outlined">
             <CardContent className="content.text">
@@ -59,7 +60,9 @@ const Comment = (props) => {
                 </IconButton>
             </CardContent>
             <CardContent>
-                <img src={thumbnailUrl}/>
+                <img  style={{borderRadius: "50%"}} src={`https://loremflickr.com/200/200?random=${
+                  Math.random() * 10
+                }`}/>
             </CardContent>
         </Card>
 

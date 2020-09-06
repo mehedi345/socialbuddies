@@ -32,16 +32,19 @@ const useStyles = makeStyles({
 
 
 const Post = (props) => {
-    const { id, title } = props.post;
+    const { id, title, body} = props.post;
     const classes = useStyles();
     return (
         <Card className={classes.root}>
             <CardContent>
                 <Typography className={classes.title} color="textSecondary" gutterBottom>
                     Post of the Day
-             </Typography>
-                <Typography variant="h5" component="h2">
+                </Typography>
+                <Typography variant="h5" component="h2" variant="contained" >
                     {title}
+                </Typography>
+                <Typography variant="h5" component="h2">
+                    {body}
                 </Typography>
             </CardContent>
             <CardActions >
